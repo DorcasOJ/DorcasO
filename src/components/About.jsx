@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { CiChat2, CiMail } from "react-icons/ci";
 import { FaMedium } from "react-icons/fa";
 import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const About = () => {
+  const fileId = import.meta.env.VITE_DOG_CV_FILE_ID;
   const github = import.meta.env.VITE_GITHUB;
   const linkedIn = import.meta.env.VITE_LINKEDIN;
   const medium = import.meta.env.VITE_MEDIUM;
+  console.log(fileId);
   return (
     <div id="about">
       <div className=" ">
@@ -61,8 +63,8 @@ const About = () => {
 
               <div className="flex items-center justify-center w-full pt-2">
                 <a
-                  href="/images/cv/DorcasOJ-CV-m.pdf"
-                  download="DorcasOlajideCV.pdf"
+                  href="https://drive.google.com/file/d/1pxOAKAX9LpOuuB2-ZdiJGZOhqKYlHYNd/view?usp=sharing"
+                  target="_blank"
                   className="flex-1 whitespace-nowrap text-sm lg:text-base w-full p-3 cursor-pointer shadow flex items-center justify-center gap-1 bg-accent-content/20 hover:text-primary hover:bg-transparent hover:border-primary
                   transition-all duration-500 ease-in-out"
                 >
