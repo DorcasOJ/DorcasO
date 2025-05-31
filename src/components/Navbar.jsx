@@ -3,6 +3,19 @@ import { LuMenu } from "react-icons/lu";
 
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [activeLink, setActiveLink] = useState({
+    about: true,
+    projects: false,
+    blog: false,
+    contact: false,
+  });
+  function changeActiveLink(trueActive) {
+    setActiveLink((prev) =>
+      Object.fromEntries(
+        Object.keys(prev).map((key) => [key, key === trueActive])
+      )
+    );
+  }
   function toggleMobileMenu() {
     setOpenMobileMenu((prev) => !prev);
   }
@@ -71,20 +84,40 @@ const Navbar = () => {
             {/* nav items for large screen */}
             <div className="hidden md:flex items-center justify-between md:gap-x-6 lg:gap-x-10 z-20">
               <ul className="flex items-center md:gap-x-8 lg:gap-x-10 ">
-                <li className="cursor-pointer hover:text-primary">
+                <li
+                  className={`cursor-pointer hover:underline hover:decoration-primary decoration-2 ${
+                    activeLink.about && "text-primary"
+                  }`}
+                  onClick={() => changeActiveLink("about")}
+                >
                   <a href="#about">About</a>
                 </li>
 
-                <li className="cursor-pointer  hover:text-primary">
+                <li
+                  className={`cursor-pointer  hover:underline hover:decoration-primary decoration-2 ${
+                    activeLink.projects && "text-primary"
+                  }`}
+                  onClick={() => changeActiveLink("projects")}
+                >
                   <a href="#projects">Projects</a>
                 </li>
-                <li className="cursor-pointer  hover:text-primary">
+                <li
+                  className={`cursor-pointer  hover:underline hover:decoration-primary decoration-2 ${
+                    activeLink.blog && "text-primary"
+                  }`}
+                  onClick={() => changeActiveLink("blog")}
+                >
                   <a href="#blog">Blogs</a>
                 </li>
-                {/* <li className="cursor-pointer  hover:text-primary">
+                {/* <li className="cursor-pointer  hover:underline hover:decoration-primary decoration-">
                   <a href="#experience">Experience</a>
                 </li> */}
-                <li className="cursor-pointer  hover:text-primary-content btn btn-outline btn-sm btn-primary">
+                <li
+                  className={`cursor-pointer  text-accent-content btn btn-outline btn-sm hover:bg-primary hover:text-primary-content ${
+                    activeLink.contact && "text-primary-content bg-primary "
+                  } `}
+                  onClick={() => changeActiveLink("contact")}
+                >
                   <a href="#contact">Contact Me</a>
                 </li>
               </ul>

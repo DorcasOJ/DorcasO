@@ -38,7 +38,6 @@ const Contact = () => {
       }
     );
   }
-  console.log(formLoading);
 
   return (
     <div id="contact">
@@ -52,15 +51,11 @@ const Contact = () => {
               <AlertError text="Message Not Sent!, try again after a while" />
             )}
           </div>
-          <div className=" px-4 py-8 flex flex-col md:flex-row gap-y-10 items-center justify-center w-full  lg:gap-x-10 ">
-            <span className="text-2xl font-normal tracking-wider py-5 lg:py-0 flex-1 hero-font text-center ">
+          <div className=" px-4 py-8 flex flex-col gap-y-10 items-center justify-center w-full   ">
+            <span className="text-2xl font-normal tracking-wider py-5 lg:py-0 hero-font text-center ">
               Let's Get in Touch.
             </span>
-            <form
-              ref={formRef}
-              action={sendMessage}
-              className="w-[100%] flex-1 "
-            >
+            <form ref={formRef} action={sendMessage} className="w-[100%]">
               <fieldset className="fieldset  border-base-300 rounded-box p-4 w-full border">
                 <legend className="fieldset-legend text-sm">Contact me</legend>
 
@@ -73,7 +68,7 @@ const Contact = () => {
                     type="text"
                     name="name"
                     id="name"
-                    maxLength="20"
+                    maxLength="30"
                     pattern=".{1, 30}"
                     title="Maximum 30 characters allowed"
                     className="input rounded-lg pe-[42px]  focus:outline-0 w-full"
