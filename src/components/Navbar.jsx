@@ -85,27 +85,21 @@ const Navbar = () => {
             <div className="hidden md:flex items-center justify-between md:gap-x-6 lg:gap-x-10 z-20">
               <ul className="flex items-center md:gap-x-8 lg:gap-x-10 ">
                 <li
-                  className={`cursor-pointer hover:underline hover:decoration-primary decoration-2 ${
-                    activeLink.about && "text-primary"
-                  }`}
-                  onClick={() => changeActiveLink("about")}
+                  className={`cursor-pointer hover:underline hover:decoration-primary decoration-2 `}
+                  // onClick={() => changeActiveLink("about")}
                 >
                   <a href="#about">About</a>
                 </li>
 
                 <li
-                  className={`cursor-pointer  hover:underline hover:decoration-primary decoration-2 ${
-                    activeLink.projects && "text-primary"
-                  }`}
-                  onClick={() => changeActiveLink("projects")}
+                  className={`cursor-pointer  hover:underline hover:decoration-primary decoration-2 `}
+                  // onClick={() => changeActiveLink("projects")}
                 >
                   <a href="#projects">Projects</a>
                 </li>
                 <li
-                  className={`cursor-pointer  hover:underline hover:decoration-primary decoration-2 ${
-                    activeLink.blog && "text-primary"
-                  }`}
-                  onClick={() => changeActiveLink("blog")}
+                  className={`cursor-pointer  hover:underline hover:decoration-primary decoration-2 `}
+                  // onClick={() => changeActiveLink("blog")}
                 >
                   <a href="#blog">Blogs</a>
                 </li>
@@ -113,10 +107,8 @@ const Navbar = () => {
                   <a href="#experience">Experience</a>
                 </li> */}
                 <li
-                  className={`cursor-pointer  text-accent-content btn btn-outline btn-sm hover:bg-primary hover:text-primary-content ${
-                    activeLink.contact && "text-primary-content bg-primary "
-                  } `}
-                  onClick={() => changeActiveLink("contact")}
+                  className={`cursor-pointer  text-accent-content btn btn-outline btn-sm hover:bg-primary hover:text-primary-content  `}
+                  // onClick={() => changeActiveLink("contact")}
                 >
                   <a href="#contact">Contact Me</a>
                 </li>
@@ -124,10 +116,8 @@ const Navbar = () => {
             </div>
 
             <div
-              className={`border p-1 border-dotted rounded flex items-center justify-center cursor-pointer md:hidden ${
-                openMobileMenu && "text-accent-content "
-              }`}
-              onClick={toggleMobileMenu}
+              className={`border p-1 border-dotted rounded flex items-center justify-center cursor-pointer md:hidden `}
+              // onClick={toggleMobileMenu}
             >
               <LuMenu className="text-2xl" />
             </div>

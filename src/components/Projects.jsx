@@ -61,9 +61,9 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className=" bottom-0 absolute px-2  md:h-[30px] py-1 flex flex-col items-center justify-center gap-x-4 font-bold rounded backdrop-blur-sm bg-clip-padding hover:border   text-white transition-all duration-500 ease-in-out">
-                <span className="text-center text-base">{project.name}</span>
-                <div className=" lg:hidden py-2 flex  gap-x-8 gap-y-2 text-xs cursor-pointer items-center justify-center">
+              <div className=" lg:hidden bottom-0 sm:bottom-5 absolute px-2 py-1 flex flex-col items-center justify-center gap-x-4 font-bold rounded backdrop-blur-sm bg-clip-padding hover:border   text-white transition-all duration-500 ease-in-out">
+                <span className="text-center text-xl">{project.name}</span>
+                <div className=" py-2 flex  gap-x-8 gap-y-2 cursor-pointer items-center justify-center text-lg ">
                   <span className="hover:text-secondary-content underline font-bold">
                     <a
                       href={`${project.link}`}
