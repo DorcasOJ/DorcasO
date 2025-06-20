@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 w-full z-30 bg-clip-padding backdrop-blur-sm  duration-1000 ease-in-out  ">
         <div
           className={`max-w-7xl mx-auto md:px-8 7xl:px-1 pt-4 md:pt-8 px-4 sm:px-8 pb-4 md:pb-5 relative boxShadow ${
-            openMobileMenu && "bg-accent md:bg-transparent"
+            openMobileMenu && "bg-accent/60 backdrop-blur-lg md:bg-transparent"
           }`}
         >
           <div
@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="flex flex-col items-end gap-y-5 justify-end relative">
               <div className="flex gap-x-4 items-center justify-center ">
                 <a href="#" className="z-20">
-                  <span className="hero-font text-xl md:text-2xl text-primary">
+                  <span className="hero-font text-xl md:text-2xl text-accent-content">
                     &lt;Logo /&gt;
                   </span>
                 </a>
@@ -45,7 +45,7 @@ const Navbar = () => {
               </div>
 
               {openMobileMenu && (
-                <div className=" w-full md:hidden ">
+                <div className=" w-full md:hidden transition-all duration-700  ">
                   <ul className="flex flex-col items-start gap-y-2  ps-10 hero-font text-lg text-accent-content">
                     <li className="cursor-pointer hover:text-primary">
                       <a href="#about" onClick={toggleMobileMenu}>
@@ -117,7 +117,7 @@ const Navbar = () => {
 
             <div
               className={`border p-1 border-dotted rounded flex items-center justify-center cursor-pointer md:hidden `}
-              // onClick={toggleMobileMenu}
+              onClick={toggleMobileMenu}
             >
               <LuMenu className="text-2xl" />
             </div>

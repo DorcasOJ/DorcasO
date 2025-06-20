@@ -92,7 +92,7 @@ const Contact = () => {
                   />
                 </span>
 
-                <label htmlFor="organization" className="label pt-3">
+                {/* <label htmlFor="organization" className="label pt-3">
                   Organization
                 </label>
                 <span className="flex items-center relative">
@@ -105,7 +105,7 @@ const Contact = () => {
                     placeholder="Enter your organization..."
                     required
                   />
-                </span>
+                </span> */}
 
                 <label htmlFor="phoneNumber" className="label pt-3">
                   Phone Number

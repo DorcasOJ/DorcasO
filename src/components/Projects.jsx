@@ -12,7 +12,7 @@ const Projects = () => {
         <hr className="w-[70px]" />
       </span>
       <div className="w-full flex items-center justify-center ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-15 lg:gap-10 w-[70vw] md:w-full 2xl:gap-25 py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-15 lg:gap-10 w-[70vw] sm:w-[55vw] md:w-full 2xl:gap-25 py-10">
           {data?.projects?.map((project) => (
             <div
               className={`relative text-white overflow-  rounded-xl flex items-center justify-center min-h-[42vh] w-full md:w-[70%] lg:w-full ms-auto group shadow 2xl:min-h-[25vh] ${project?.span}`}
@@ -61,7 +61,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className=" lg:hidden bottom-0 sm:bottom-5 absolute px-2 py-1 flex flex-col items-center justify-center gap-x-4 font-bold rounded backdrop-blur-sm bg-clip-padding hover:border   text-white transition-all duration-500 ease-in-out">
+              <div className=" lg:hidden bottom-0  absolute px-2 py-1 flex flex-col items-center justify-center gap-x-4 font-bold rounded backdrop-blur-lg w-[70vw] sm:w-[55vw] bg-clip-padding hover:border text-white transition-all duration-500 ease-in-out">
                 <span className="text-center text-xl">{project.name}</span>
                 <div className=" py-2 flex  gap-x-8 gap-y-2 cursor-pointer items-center justify-center text-lg ">
                   <span className="hover:text-secondary-content underline font-bold">

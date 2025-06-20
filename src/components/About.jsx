@@ -4,10 +4,11 @@ import { FaMedium } from "react-icons/fa";
 import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const About = () => {
-  const fileId = import.meta.env.VITE_DOG_CV_FILE_ID;
+  const fileId = import.meta.env.VITE_CV_FILE_ID;
   const github = import.meta.env.VITE_GITHUB;
   const linkedIn = import.meta.env.VITE_LINKEDIN;
   const medium = import.meta.env.VITE_MEDIUM;
+
   console.log(fileId);
   return (
     <div id="about">
@@ -50,20 +51,20 @@ const About = () => {
                 </a>
               </div>
 
-              <a
+              {/* <a
                 href="#contact"
-                className="btn bg-secondary-content text-2xl hero-font tracking-wide w-[65%] flex gap-x-3 items-center justify-center my-8 py-6 text-primary-content hover:bg-transparent hover:bg-gradient-to-bl from-primary to-secondary-content  hover:border-primary
+                className="text-2xl hero-font tracking-wide flex gap-x-3 items-center justify-center my-6 p-3 text-primary hover:bg-transparent hover:bg-gradient-to-bl from-primary to-secondary-content  hover:border-primary
                 transition-all duration-500 ease-in-out"
               >
                 <span>
                   <CiMail className="" />
                 </span>
                 <span className="text-xl font-light">Hire me</span>
-              </a>
+              </a> */}
 
-              <div className="flex items-center justify-center w-full pt-2">
+              <div className="flex items-center justify-center w-full pt-2 mt-4">
                 <a
-                  href="https://drive.google.com/file/d/1pxOAKAX9LpOuuB2-ZdiJGZOhqKYlHYNd/view?usp=sharing"
+                  href={`https://drive.google.com/file/d/${fileId}/view?usp=sharing`}
                   target="_blank"
                   className="flex-1 whitespace-nowrap text-sm lg:text-base w-full p-3 cursor-pointer shadow flex items-center justify-center gap-1 bg-accent-content/20 hover:text-primary hover:bg-transparent hover:border-primary
                   transition-all duration-500 ease-in-out"

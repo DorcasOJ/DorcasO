@@ -16,7 +16,7 @@ const Blog = () => {
         <div className="w-full sm:w-[80%]  flex flex-col gap-y-15 sm:gap-y-12 ">
           {data?.blogs?.map((article) => (
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <div className=" h-[100px] w-full sm:flex-2 sm:h-full ">
+              <div className=" h-[250px] sm:h-[100px] w-full sm:flex-2 sm:h-full ">
                 <a href={`${article.link}`} target="_blank">
                   <img
                     src={`${article.image_url}`}
@@ -26,11 +26,11 @@ const Blog = () => {
                 </a>
               </div>
               <div className="flex-4 flex flex-col gap-y-1 items-start justify-center text-center sm:text-left">
-                <span className="text-sm sm:text-base md:text-lg font-medium text-center sm:text-left w-full ">
+                <span className="text-base sm:text-lg md:text-xl font-medium text-center sm:text-left w-full ">
                   {article.name}
                 </span>
 
-                <p className="text-xs md:text-sm text-gray-500">
+                <p className="w-[90%] sm:w-[100%] text-xs md:text-sm text-gray-500">
                   {article.description}
                 </p>
                 <span className="text-sm self-center sm:self-start">
