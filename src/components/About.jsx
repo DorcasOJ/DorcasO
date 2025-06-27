@@ -4,12 +4,11 @@ import { FaMedium } from "react-icons/fa";
 import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const About = () => {
-  const fileId = import.meta.env.VITE_CV_FILE_ID;
+  // const fileId = import.meta.env.VITE_CV_FILE_ID;
   const github = import.meta.env.VITE_GITHUB;
   const linkedIn = import.meta.env.VITE_LINKEDIN;
   const medium = import.meta.env.VITE_MEDIUM;
 
-  console.log(fileId);
   return (
     <div id="about">
       <div className=" ">
@@ -64,7 +63,7 @@ const About = () => {
 
               <div className="flex items-center justify-center w-full pt-2 mt-4">
                 <a
-                  href={`https://drive.google.com/file/d/${fileId}/view?usp=sharing`}
+                  href={`https://drive.google.com/file/d/1cHHyC-TLWHQCCaySy_8mKegZEbD88mg-/view?usp=sharing`}
                   target="_blank"
                   className="flex-1 whitespace-nowrap text-sm lg:text-base w-full p-3 cursor-pointer shadow flex items-center justify-center gap-1 bg-accent-content/20 hover:text-primary hover:bg-transparent hover:border-primary
                   transition-all duration-500 ease-in-out"
