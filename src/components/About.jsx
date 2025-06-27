@@ -69,7 +69,7 @@ const About = () => {
                   className="flex-1 whitespace-nowrap text-sm lg:text-base w-full p-3 cursor-pointer shadow flex items-center justify-center gap-1 bg-accent-content/20 hover:text-primary hover:bg-transparent hover:border-primary
                   transition-all duration-500 ease-in-out"
                 >
-                  Download Cv
+                  Download CV
                   <FiDownload className="text-base" />
                 </a>
                 <a
